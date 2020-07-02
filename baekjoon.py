@@ -5,5 +5,6 @@ while T!=0:
     X=[]
     k=int(input())
     n=int(input())
+    x0=[i for i in range(1,n+1)]
     
-
+    
