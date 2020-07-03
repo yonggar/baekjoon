@@ -1,15 +1,25 @@
+import math
 T=int(input())
 
 while T!=0:
     T-=1
-    k=int(input())
-    n=int(input())
-    X=[[] for _ in range(k+1)]
-    X[0]=[i for i in range(n+1)]
-    for i in range(1,k+1):
-        X[i]=[0]
-        for j in range(n):
-            X[i].append(X[i-1][j+1]+X[i][j])
+    x,y=map(int,input().split())
+    s=y-x
+    #s의 제곱근구하기
+    sr=math.ceil(s**(1/2))
+    #홀수수열값
+    odd=2*sr-1
+    if s**(1/2)==sr:
+        print(odd)
+    else:
+        if s>sr**2-sr:
+            print(odd)
+        else:
+            print(odd-1)
 
-    print(X[k][n])
+a=1
+    ###s가 제곱근(1**2,2**2,3**2,4**2~)일때 (1,3,5,7,9~)수열을이룬다
+    ###   제곱근 해당 수 만큼 처리과정이잇고 그앞은 -1
+    ###cf) 49~56(14) 57~64(15) 65~72(16) 73~81(17) 82~90(18) 91~100(19)
 
+    #제너레이터로만들어 메모리줄이기 or 마지막값으로만계산출력
