@@ -7,10 +7,9 @@ while T!=0:
     X=[[] for _ in range(k+1)]
     X[0]=[i for i in range(n+1)]
     for i in range(1,k+1):
-        a=[]
-        for j in range(n+1):
-            a.append(X[i][j]+X[i+1][j-1])
-        X[i]=a
+        X[i]=[0]
+        for j in range(n):
+            X[i].append(X[i-1][j+1]+X[i][j])
 
-    print(X)
+    print(X[k][n])
 
