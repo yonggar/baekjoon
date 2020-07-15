@@ -1,19 +1,25 @@
-M=int(input())
-N=int(input())
+# def prime(n):
+#     if n==1:
+#         return False
+#     else:
+#         for i in range(2,int(n**0.5)+1):
+#             if n%i==0:
+#                 return False
+#         return True
 
-d=[]
+M,N=map(int,input().split())
+
+# for i in range(M,N+1):
+#     if prime(i):
+#         print(i)
+
 for i in range(M,N+1):
+    if i==1:
+        continue
     if i==2:
-        d.append(i)
+        print(i)
     else:
-        for j in range(2,i):
+        for j in range(2,int(i**0.5)+1):
             if i%j==0:
                 break
-            elif i==j+1:
-                d.append(i)
-
-if d==[]:
-    print(-1)
-else:
-    print(sum(d))
-    print(d[0])
+        print(i) 
