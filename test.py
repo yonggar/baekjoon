@@ -1,12 +1,23 @@
-a=[[1,2],[2,3]]
-b=[[3,4],[5,6]]	
+def mo(m):
+    len(m)
+    a=[1,2,3,4,5]*2000
+    b=[2,1,2,3,2,4,5]*2000
+    c=[3,3,1,1,2,2,4,4,5,5]*1000
+    A=[]
+    B=[]
+    C=[]
+    for i in range(len(m)):
+        if m[i]==a[i]:
+            A.append(i)
+    for i in range(len(m)):
+        if m[i]==b[i]:
+            B.append(i)
+    for i in range(len(m)):
+        if m[i]==c[i]:
+            C.append(i)
+    M=[len(A),len(B),len(C)]
+    return max(M)
 
-def n(a,b):
-    for i in range(len(a)):
-        for j in range(len(a[i])):
-            a[i][j]=a[i][j]+b[i][j]
 
 
-# c=[[x+y for x,y in zip(c,d)]for c, d in zip(a,b)]
-
-print(n(a,b))
+print(mo([1,2,3,4,5]))
