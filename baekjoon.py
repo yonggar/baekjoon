@@ -9,9 +9,6 @@
 
 M,N=map(int,input().split())
 
-# for i in range(M,N+1):
-#     if prime(i):
-#         print(i)
 
 for i in range(M,N+1):
     if i==1:
